@@ -1,0 +1,11 @@
+version: 2
+updates:
+  - package-ecosystem: npm
+    directory: /
+    schedule:
+      interval: weekly
+    open-pull-requests-limit: 5
+    # Dependency cooldown: a new release is not proposed until it is 7 days old, so a hijacked
+    # release is caught upstream first. Version updates only; security updates are not delayed.
+    cooldown:
+      default-days: 7
